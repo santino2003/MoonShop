@@ -20,9 +20,7 @@ const App = props => {
     backgroundColor: 'lightblue',
   }
 
-  const boton = {
-    paddingLeft: '650px'
-  }
+
 
   const estilo3 ={
     paddingLeft: "255px",
@@ -33,20 +31,9 @@ const App = props => {
     <Container style={estilo}>
       <Row style={estilo2}>
         <Navbar/>
-        <Dropdown style={boton}>
-          <Dropdown.Toggle variant="primary" id="dropdown-basic">
-            Secciones
-          </Dropdown.Toggle>
-
-          <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">Catalgo</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">FAQ</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Sobre Nosotro</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
       </Row>
       <Row style={estilo3}>
-        <ItemListContainer/>
+        <ItemListContainer greeting={"Bienvendios a MoonShop"}/>
       </Row>
       
       

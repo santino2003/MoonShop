@@ -1,10 +1,10 @@
 import React from 'react'
 import { Col } from 'react-bootstrap'
 
-const ItemListContainer = () => {
+const ItemListContainer = ({greeting}) => {
   return (
     <Col className='text-center'>
-      <p>Bienvendios a MoonShop</p>
+      {greeting}
     </Col>
   )
 }

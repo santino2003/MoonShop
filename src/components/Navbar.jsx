@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col } from 'react-bootstrap';
+import { Col ,Dropdown} from 'react-bootstrap';
 import CartWidget from './CartWidget';
 
 const Navbar = () => {
@@ -9,6 +9,9 @@ const Navbar = () => {
   }
   const divLogo ={
     paddingLeft: "50px"
+  }
+  const boton = {
+    paddingLeft: '650px'
   }
   return (
 
@@ -30,6 +33,17 @@ const Navbar = () => {
       <Col className='col-2'>
         <CartWidget/>
       </Col>
+      <Dropdown style={boton}>
+          <Dropdown.Toggle variant="primary" id="dropdown-basic">
+            Secciones
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu>
+            <Dropdown.Item href="#/action-1">Catalgo</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">FAQ</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Sobre Nosotro</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
         
     </>
   )
