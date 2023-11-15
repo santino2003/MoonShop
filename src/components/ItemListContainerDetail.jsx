@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { Col } from 'react-bootstrap'
-import ItmList from './ItmList'
+
+import ItmListDetail from './ItmListDetail'
 
 
-const ItemListContainer = () => {
+const ItemListContainerDetail = () => {
   const productos = [
     {id: '1',titulo:'remera estampada',descripcion: 'remera estampada roja',precio: 2000},
     {id: '2',titulo:'pantalon jean',descripcion: 'rotura EN LA RODILLA',precio: 15000},
@@ -35,8 +35,8 @@ const ItemListContainer = () => {
   
   return (
     
-    <ItmList productos={productos}/>
+    <ItmListDetail productos={productos}/>
   )
 }
 
-export default ItemListContainer
+export default ItemListContainerDetail
