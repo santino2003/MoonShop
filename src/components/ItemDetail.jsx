@@ -10,7 +10,7 @@ const ItemDetail= ({item}) => {
             <Card.Title>{item.titulo}</Card.Title>
             <Card.Text>{item.descripcion}</Card.Text>
             <Card.Text>Precio: ${item.precio}</Card.Text>
-            <Counter/>
+            <Contador/>
           </Card.Body>
         </Card>
       );
