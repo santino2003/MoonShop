@@ -27,7 +27,7 @@ const Contador = () => {
     <Container className="text-center mt-3">
       <Row>
         <Col xs={2}>
-          <Button variant="info" size="sm" onClick={handleDecrement}>
+          <Button variant="info" size="sm" onClick={restarContador }>
             -
           </Button>
         </Col>

@@ -12,8 +12,10 @@ const Navbar = () => {
     paddingLeft: "50px"
   }
   const boton = {
-    paddingLeft: '650px'
+    paddingLeft: '700px'
   }
+
+
   return (
 
     <>
@@ -37,7 +39,7 @@ const Navbar = () => {
         <CartWidget/>
       </Col>
       <Dropdown style={boton}>
-          <Dropdown.Toggle variant="primary" id="dropdown-basic">
+          <Dropdown.Toggle  variant="primary" id="dropdown-basic">
             Secciones
           </Dropdown.Toggle>
 
