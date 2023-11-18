@@ -1,11 +1,12 @@
 import React from 'react'
 import { Col ,Dropdown} from 'react-bootstrap';
 import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const Titulo ={
     fontSize: '90px',
-    paddingRight: "70px"
+    paddingRight: "10px"
   }
   const divLogo ={
     paddingLeft: "50px"
@@ -18,12 +19,14 @@ const Navbar = () => {
     <>
       <Col className='col-2'>
         <div style={divLogo}>
-          <img
-            src="../public/mm-removebg-preview.png"
-            alt="Logo MoonShop"
-            id="foto_logo"
-            height="170rem"
-            width="170rem" />
+          <Link to="/">
+            <img
+              src="../mm-removebg-preview.png"
+              alt="Logo MoonShop"
+              id="foto_logo"
+              height="170rem"
+              width="170rem" />
+          </Link>
         </div>
 
       </Col>
@@ -39,9 +42,9 @@ const Navbar = () => {
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">Catalgo</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">FAQ</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Sobre Nosotro</Dropdown.Item>
+            <Dropdown.Item href="/category/A">Categoria A</Dropdown.Item>
+            <Dropdown.Item href="/category/B">Categoria B</Dropdown.Item>
+            <Dropdown.Item href="/category/C">Categoria C</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
         

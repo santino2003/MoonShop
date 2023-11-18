@@ -14,7 +14,7 @@ const CartWidget = () => {
   return (
     <div>
         <h5 style={icono}>
-          <img src="public\bag-heart.svg" alt=""
+          <img src="/bag-heart.svg" alt=""
            height="45rem"
            width="45rem" />
         </h5>

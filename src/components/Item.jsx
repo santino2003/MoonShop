@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 const Item = ({item}) => {
     return (
@@ -8,9 +9,11 @@ const Item = ({item}) => {
           {/* <Card.Img variant="top" src={item.imagenUrl} /> */}
           <Card.Body className="text-center">
             <Card.Title>{item.titulo}</Card.Title>
-            <Card.Text>{item.descripcion}</Card.Text>
             <Card.Text>Precio: ${item.precio}</Card.Text>
-            <Button variant="primary">Detalles</Button>
+            <Link to={`/item/${item.id}`}>
+              <Button variant="primary">Detalles</Button>
+            </Link>
+            
           </Card.Body>
         </Card>
       );

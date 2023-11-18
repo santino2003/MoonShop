@@ -2,8 +2,14 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row,Dropdown } from 'react-bootstrap';
 import ItemListContainer from './components/ItemListContainer';
-import Navbar from './components/navbar';
+import Navbar from './components/Navbar';
 import ItemListContainerDetail from './components/ItemListContainerDetail';
+import Counter from './components/Contador';
+import {
+  BrowserRouter,
+  Routes,
+  Route} 
+from 'react-router-dom'
 
 
 const App = props => {
@@ -25,22 +31,27 @@ const App = props => {
 
   const estilo3 ={
     width: '223vh',
-    backgroundColor: 'red',
+   
 
   }
   return (
-    <Container style={estilo}>
-      <Row style={estilo2}>
-        <Navbar/>
-      </Row>
-      <Row className="justify-content-around" style={estilo3}>
-        {/* <ItemListContainer/> */}
-        <ItemListContainerDetail/>
-      </Row>
-      
-      
-    </Container>
-   
+    <BrowserRouter >
+      <Container style={estilo}>
+        <Row style={estilo2}>
+          <Navbar/>
+        </Row>
+
+        <Row className="justify-content-around" style={estilo3}>
+          <Routes>
+            <Route exact path='/' element={<ItemListContainer />} />
+            <Route exact path='/category/:id' element={<ItemListContainer />} />
+            <Route exact path='/item/:id' element={<ItemListContainerDetail/>} />
+          </Routes>
+        </Row>
+        
+        
+      </Container>
+    </BrowserRouter>
   )
 }
 

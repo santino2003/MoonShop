@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import Contador from './Contador';
 
 const ItemDetail= ({item}) => {
     return (
@@ -10,7 +10,7 @@ const ItemDetail= ({item}) => {
             <Card.Title>{item.titulo}</Card.Title>
             <Card.Text>{item.descripcion}</Card.Text>
             <Card.Text>Precio: ${item.precio}</Card.Text>
-            <Button variant="primary">Detalles</Button>
+            <Counter/>
           </Card.Body>
         </Card>
       );
