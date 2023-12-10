@@ -10,6 +10,7 @@ const ItmList = ({productos}) => {
         productos.map((item)=> (
           <Col key={item.id} sm={6} md={4} lg={3} style={{ marginLeft: '30px'}}>
             <Item key={item.id} item={item} />
+            
           </Col>
           
 

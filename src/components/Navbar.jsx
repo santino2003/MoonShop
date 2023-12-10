@@ -44,9 +44,9 @@ const Navbar = () => {
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
-            <Dropdown.Item href="/category/A">Categoria A</Dropdown.Item>
-            <Dropdown.Item href="/category/B">Categoria B</Dropdown.Item>
-            <Dropdown.Item href="/category/C">Categoria C</Dropdown.Item>
+            <Link to="/category/A" className="dropdown-item">Categoria A</Link>
+            <Link to="/category/B" className="dropdown-item">Categoria B</Link>
+            <Link to="/category/C" className="dropdown-item">Categoria C</Link>
           </Dropdown.Menu>
         </Dropdown>
         

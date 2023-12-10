@@ -1,8 +1,21 @@
 import React, { useState } from 'react';
 import { Button, Container, Row, Col } from 'react-bootstrap';
+import { useCart } from '../context/cartContex'
 
-const Contador = () => {
+const Contador = ({item}) => {
+  const { addToCart } = useCart();
+
+ 
   const [count, setCount] = useState(0);
+
+  const handleAddToCart = () => {
+    if (count > 0){
+      addToCart(item,count);
+      // Puedes mostrar un mensaje de éxito, una animación, etc.
+      alert(`${item.nombre} ha sido agregado al carrito.`);
+    }
+
+  }
 
   const sumarContador = () => {
     if(count < 10){
@@ -42,7 +55,7 @@ const Contador = () => {
       </Row>
       <Row className="mt-3">
         <Col>
-          <Button variant="info" size="sm" onClick={mostrarAlert}>
+          <Button variant="info" size="sm"  onClick={handleAddToCart}>
             Agregar al carrito
           </Button>
         </Col>

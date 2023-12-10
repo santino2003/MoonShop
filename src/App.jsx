@@ -4,12 +4,16 @@ import { Container, Row,Dropdown } from 'react-bootstrap';
 import ItemListContainer from './components/ItemListContainer';
 import Navbar from './components/Navbar';
 import ItemListContainerDetail from './components/ItemListContainerDetail';
-import Counter from './components/Contador';
+import Cart from './components/Cart';
+import {CartProvider} from './context/cartContex'
+
+
 import {
   BrowserRouter,
   Routes,
   Route} 
 from 'react-router-dom'
+
 
 
 const App = props => {
@@ -36,21 +40,28 @@ const App = props => {
   }
   return (
     <BrowserRouter >
-      <Container style={estilo}>
-        <Row style={estilo2}>
-          <Navbar/>
-        </Row>
+      <CartProvider>
+        <Container style={estilo}>
+          <Row style={estilo2}>
+            <Navbar/>
+          </Row>
 
-        <Row className="justify-content-around" style={estilo3}>
-          <Routes>
-            <Route exact path='/' element={<ItemListContainer />} />
-            <Route exact path='/category/:id' element={<ItemListContainer />} />
-            <Route exact path='/item/:id' element={<ItemListContainerDetail/>} />
-          </Routes>
-        </Row>
-        
-        
-      </Container>
+          <Row className="justify-content-around" style={estilo3}>
+          
+              <Routes>
+                <Route exact path='/' element={<ItemListContainer />} />
+                <Route exact path='/category/:id' element={<ItemListContainer />} />
+                <Route exact path='/item/:id' element={<ItemListContainerDetail/>} />
+                
+                <Route exact path='/cart' element={<Cart />} />
+                
+              </Routes>
+          
+          </Row>
+          
+          
+        </Container>
+      </CartProvider>
     </BrowserRouter>
   )
 }
