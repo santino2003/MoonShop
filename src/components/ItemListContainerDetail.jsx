@@ -11,7 +11,7 @@ const ItemListContainerDetail = () => {
   const [producto ,setProducto] = useState([])
   useEffect(()=> {
     const db = getFirestore()
-    const oneItem = doc(db, "jeanes",id)
+    const oneItem = doc(db, "ropa",id)
     console.log(oneItem)
 
     getDoc(oneItem).then((snapshot) => {

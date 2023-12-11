@@ -12,7 +12,7 @@ const Navbar = () => {
     paddingLeft: "50px"
   }
   const boton = {
-    paddingLeft: '700px'
+    paddingLeft: '60rem'
   }
 
 
@@ -44,9 +44,9 @@ const Navbar = () => {
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
-            <Link to="/category/A" className="dropdown-item">Categoria A</Link>
-            <Link to="/category/B" className="dropdown-item">Categoria B</Link>
-            <Link to="/category/C" className="dropdown-item">Categoria C</Link>
+            <Link to="/category/pantalones" className="dropdown-item">Pantalones</Link>
+            <Link to="/category/abrigo" className="dropdown-item">Abrigo</Link>
+            <Link to="/category/blusas" className="dropdown-item">Blusas</Link>
           </Dropdown.Menu>
         </Dropdown>
         

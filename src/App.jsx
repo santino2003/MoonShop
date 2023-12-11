@@ -1,18 +1,17 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row,Dropdown } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import ItemListContainer from './components/ItemListContainer';
 import Navbar from './components/Navbar';
 import ItemListContainerDetail from './components/ItemListContainerDetail';
 import Cart from './components/Cart';
-import {CartProvider} from './context/cartContex'
-
-
+import {CartProvider} from './context/cartContex';
 import {
   BrowserRouter,
   Routes,
   Route} 
 from 'react-router-dom'
+import SendOrder from './components/SendOrder';
 
 
 
@@ -52,7 +51,7 @@ const App = props => {
                 <Route exact path='/' element={<ItemListContainer />} />
                 <Route exact path='/category/:id' element={<ItemListContainer />} />
                 <Route exact path='/item/:id' element={<ItemListContainerDetail/>} />
-                
+                <Route exact path='/confirmacion' element={<SendOrder/>}/>
                 <Route exact path='/cart' element={<Cart />} />
                 
               </Routes>
